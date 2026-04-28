@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Parties & Events | Paradise Alley — Mandeville, LA</title>
+  <meta name="description" content="Host your next party or private event at Paradise Alley. Bowling, bar, kitchen, and a dance floor — all under one roof in Mandeville, LA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .includes-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); border-radius: var(--r-card); overflow: hidden;
+    }
+    .include-item {
+      background: var(--bg2); padding: 28px 32px;
+      display: flex; align-items: flex-start; gap: 18px;
+      transition: background .2s;
+    }
+    .include-item:hover { background: var(--bg3); }
+    .include-icon {
+      width: 36px; height: 36px; flex-shrink: 0; margin-top: 2px;
+      border-radius: var(--r); background: var(--neon-faint);
+      border: 1px solid var(--neon-border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .include-icon svg { width: 18px; height: 18px; stroke: var(--neon); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .include-title { font-size: .9rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .include-desc { font-size: .8rem; color: var(--gray); line-height: 1.6; }
+    .pricing-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .booking-form {
+      background: var(--bg2); border: 1px solid var(--border);
+      border-radius: var(--r-card); padding: 40px;
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-grid.full { grid-template-columns: 1fr; }
+    @media (max-width: 768px) {
+      .includes-grid { grid-template-columns: 1fr; }
+      .pricing-row { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .booking-form { padding: 24px 20px; }
+      .include-item { padding: 22px 20px; }
+    }
+    @media (max-width: 480px) {
+      .booking-form { padding: 20px 16px; }
+      .include-item { padding: 18px 16px; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-line"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><span class="dot"></span>Paradise Alley</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="leagues.html">Leagues</a></li>
+      <li><a href="parties.html">Parties</a></li>
+      <li><a href="birthdays.html">Birthdays</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="leagues.html">Leagues</a>
+    <a href="parties.html">Parties</a>
+    <a href="birthdays.html">Birthdays</a>
+    <a href="contact.html" class="mobile-cta">Contact Us</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="inner-hero">
+      <div class="inner-hero-content">
+        <div class="inner-hero-label"><span></span>Groups, Corporate &amp; Special Events</div>
+        <h1>Private<br><em>Parties</em></h1>
+      </div>
+    </div>
+    <div class="neon-divider"></div>
+
+    <!-- ── INTRO ──────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="gap:80px;align-items:center;">
+          <div class="reveal-left">
+            <div class="section-eyebrow">Host Your Event Here</div>
+            <h2 class="section-heading">YOUR EVENT,<br>OUR LANES</h2>
+            <p style="font-size:.95rem;color:var(--gray);line-height:1.8;margin-bottom:20px;">
+              Paradise Alley is the perfect venue for groups looking for a one-of-a-kind experience. Whether it's a corporate outing, a night out with friends, a graduation celebration, or any other special occasion — we've got the space, the lanes, and the vibe.
+            </p>
+            <p style="font-size:.9rem;color:var(--gray);line-height:1.8;margin-bottom:32px;">
+              With 32 lanes, a full bar, a full kitchen, a dance floor, pool tables, and an arcade — your group will never run out of things to do. Contact us to start planning your event.
+            </p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <a href="mailto:paradisealley.events@gmail.com" class="btn btn-neon">Book Your Party</a>
+              <a href="tel:9852722139" class="btn btn-outline">Call Us</a>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <div class="img-frame" style="height:480px;">
+              <img src="https://images.pexels.com/photos/7429518/pexels-photo-7429518.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80" alt="Group Party" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHAT'S INCLUDED ────────────────────────────────────────── -->
+    <section class="section-sm" style="background:var(--bg);">
+      <div class="container">
+        <div class="section-eyebrow reveal">What You Get</div>
+        <h2 class="section-heading reveal" style="margin-bottom:48px;">EVERYTHING<br>INCLUDED</h2>
+        <div class="includes-grid stagger reveal">
+          <div class="include-item">
+            <div class="include-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div>
+              <div class="include-title">Reserved Bowling Lanes</div>
+              <div class="include-desc">Dedicated lanes for your group for the duration of your booking, priced per lane per hour.</div>
+            </div>
+          </div>
+          <div class="include-item">
+            <div class="include-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 2h18l-2 7H5L3 2z"/><path d="M5 9v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"/></svg>
+            </div>
+            <div>
+              <div class="include-title">Full Bar Access</div>
+              <div class="include-desc">Full-service bar available to your group throughout your event. Drinks all night long.</div>
+            </div>
+          </div>
+          <div class="include-item">
+            <div class="include-icon">
+              <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div>
+              <div class="include-title">Kitchen Service</div>
+              <div class="include-desc">Order from our full kitchen menu — burgers, wings, pizza, and more to keep your group fed.</div>
+            </div>
+          </div>
+          <div class="include-item">
+            <div class="include-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <div>
+              <div class="include-title">Dance Floor &amp; Live Music</div>
+              <div class="include-desc">On Friday and Saturday nights, your event includes access to the dance floor with live music.</div>
+            </div>
+          </div>
+          <div class="include-item">
+            <div class="include-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h.01M10 12h.01M14 12h4"/></svg>
+            </div>
+            <div>
+              <div class="include-title">Arcade &amp; Pool Tables</div>
+              <div class="include-desc">When your group needs a break from the lanes, the arcade and pool tables are always available.</div>
+            </div>
+          </div>
+          <div class="include-item">
+            <div class="include-icon">
+              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div class="include-title">Dedicated Event Support</div>
+              <div class="include-desc">Our staff will help coordinate your event from arrival to last frame. We make it seamless.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRICING ─────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <div class="section-eyebrow reveal">Lane Rates</div>
+        <h2 class="section-heading reveal" style="margin-bottom:48px;">TRANSPARENT<br>PRICING</h2>
+        <div class="pricing-row stagger reveal">
+          <div class="price-card">
+            <div class="price-card-head">
+              <div class="price-card-title">Early Bird</div>
+            </div>
+            <div class="price-card-body">
+              <div class="price-big">$25</div>
+              <div class="price-unit">/ hour per lane</div>
+              <div class="price-desc">Available Tuesday through Thursday, 11 AM to 3 PM. Best rate for daytime groups.</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="price-card-head">
+              <div class="price-card-title">Standard</div>
+            </div>
+            <div class="price-card-body">
+              <div class="price-big">$35</div>
+              <div class="price-unit">/ hour per lane</div>
+              <div class="price-desc">Available any day before 6 PM. Great for afternoon group events.</div>
+            </div>
+          </div>
+          <div class="price-card">
+            <div class="price-card-head">
+              <div class="price-card-title">Evening</div>
+            </div>
+            <div class="price-card-body">
+              <div class="price-big">$40</div>
+              <div class="price-unit">/ hour per lane</div>
+              <div class="price-desc">After 6 PM any day. Perfect for evening events when the energy is at its peak.</div>
+            </div>
+          </div>
+        </div>
+        <div class="info-note" style="margin-top:24px;">
+          <strong>Shoe Rentals:</strong> Adult $4 &nbsp;|&nbsp; Children 12 &amp; under $3 &nbsp;&nbsp;
+          <strong>Lane Policy:</strong> No reservations for open play — parties must be coordinated via email in advance.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BOOKING FORM ────────────────────────────────────────────── -->
+    <section class="section-sm" style="background:var(--bg);">
+      <div class="container-sm">
+        <div class="section-eyebrow reveal">Get in Touch</div>
+        <h2 class="section-heading reveal" style="margin-bottom:40px;">REQUEST<br>YOUR EVENT</h2>
+        <div class="booking-form reveal">
+          <form action="mailto:paradisealley.events@gmail.com" method="post" enctype="text/plain">
+            <div class="form-grid" style="margin-bottom:20px;">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-input" placeholder="Jane" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-input" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-grid" style="margin-bottom:20px;">
+              <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-input" placeholder="jane@email.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-input" placeholder="(985) 000-0000" />
+              </div>
+            </div>
+            <div class="form-grid" style="margin-bottom:20px;">
+              <div class="form-group">
+                <label class="form-label">Event Date</label>
+                <input type="date" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Group Size</label>
+                <select class="form-select">
+                  <option value="">Select size…</option>
+                  <option>1–10 people</option>
+                  <option>11–25 people</option>
+                  <option>26–50 people</option>
+                  <option>50+ people</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:28px;">
+              <label class="form-label">Tell us about your event</label>
+              <textarea class="form-textarea" placeholder="Describe your event — occasion, special requests, preferred time, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn-neon" style="width:100%;justify-content:center;">Send Inquiry</button>
+          </form>
+          <p style="font-size:.78rem;color:var(--gray-dim);margin-top:16px;text-align:center;">Or email directly: <a href="mailto:paradisealley.events@gmail.com" style="color:var(--neon)">paradisealley.events@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name">Paradise <span>Alley</span></div>
+            <p class="footer-tagline">Mandeville's premier 35,000 sq ft bowling &amp; entertainment complex.</p>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/people/Paradise-Alley/61564994095362/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <a href="https://www.instagram.com/paradisealleymandeville/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-head">Explore</div>
+            <div class="footer-links"><a href="menu.html">Menu</a><a href="leagues.html">Leagues</a><a href="parties.html">Parties</a><a href="birthdays.html">Birthdays</a><a href="contact.html">Contact</a></div>
+          </div>
+          <div>
+            <div class="footer-col-head">Hours</div>
+            <div class="footer-links"><span style="color:rgba(255,80,80,.5)">Mon: Closed</span><span>Tue–Thu: 11AM–10PM</span><span>Fri–Sat: 11AM–Midnight</span><span>Sun: Noon–8PM</span></div>
+          </div>
+          <div>
+            <div class="footer-col-head">Contact</div>
+            <div class="footer-links"><a href="tel:9852722139">(985) 272-2139</a><a href="mailto:paradisealley.events@gmail.com">Events &amp; Parties</a><a href="mailto:paradiseleagues1@gmail.com">League Inquiries</a><a href="https://maps.google.com/?q=4400+LA-22+Mandeville+LA" target="_blank" rel="noopener">4400 Hwy 22 W, Mandeville</a></div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2025 <span>Paradise Alley</span>. All rights reserved.</div>
+          <div class="footer-copy">4400 Hwy 22 W, Mandeville, LA · (985) 272-2139</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
