@@ -5,6 +5,7 @@
 /* ── Reset ─────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+@keyframes body-reveal { to { opacity: 1; } }
 body {
   background: var(--bg);
   color: var(--ink);
@@ -13,8 +14,9 @@ body {
   -webkit-font-smoothing: antialiased;
   opacity: 0;
   transition: opacity .4s ease;
+  animation: body-reveal 0s 1.2s forwards;
 }
-body.ready { opacity: 1; }
+body.ready { opacity: 1; animation: none; }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; font-family: inherit; background: none; border: none; }

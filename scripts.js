@@ -4,16 +4,12 @@
 const line = document.getElementById('page-line');
 if (line) {
   line.style.width = '70%';
-  window.addEventListener('DOMContentLoaded', () => {
-    requestAnimationFrame(() => {
-      line.classList.add('done');
-      document.body.classList.add('ready');
-    });
-  });
-} else {
-  window.addEventListener('DOMContentLoaded', () => {
+  requestAnimationFrame(() => {
+    line.classList.add('done');
     document.body.classList.add('ready');
   });
+} else {
+  document.body.classList.add('ready');
 }
 
 /* ── Nav scroll ──────────────────────────────────────────────────── */
