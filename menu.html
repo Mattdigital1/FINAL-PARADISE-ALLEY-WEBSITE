@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Paradise Alley | Mandeville, LA</title>
+  <meta name="description" content="Full kitchen and bar menu at Paradise Alley in Mandeville, LA. Burgers, apps, pizza, craft beer, cocktails, and more.">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="US-LA">
+  <meta name="geo.placename" content="Mandeville, Louisiana">
+  <link rel="canonical" href="https://paradisemandeville.com/menu.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Paradise Alley">
+  <meta property="og:title" content="Menu — Paradise Alley | Mandeville, LA">
+  <meta property="og:description" content="Scratch kitchen & full bar at Paradise Alley. Burgers, pizza, po'boys, wings, craft beer, cocktails, and a full kids menu.">
+  <meta property="og:url" content="https://paradisemandeville.com/menu.html">
+  <meta property="og:image" content="https://paradisemandeville.com/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Menu — Paradise Alley | Mandeville, LA">
+  <meta name="twitter:description" content="Scratch kitchen & full bar. Burgers, pizza, po'boys, wings, craft beer, and cocktails. Kids menu available.">
+  <meta name="twitter:image" content="https://paradisemandeville.com/og-image.jpg">
+  <link rel="icon" type="image/png" href="paradise-alley-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .menu-layout { display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: start; }
+    .menu-sidebar { position: sticky; top: 96px; }
+    .sidebar-label { font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:12px; }
+    .sidebar-links { display:flex;flex-direction:column;gap:2px; }
+    .sidebar-link { font-size:.85rem;font-weight:500;color:var(--gray);padding:10px 14px;border-radius:var(--radius);transition:color .2s,background .2s;cursor:pointer;border:none;background:none;text-align:left;width:100%; }
+    .sidebar-link:hover { color:var(--white);background:var(--bg-2); }
+    .sidebar-link.active { color:var(--neon);background:var(--neon-faint); }
+    .menu-note { font-size:.78rem;color:var(--ink-mute);line-height:1.6;margin-top:24px;padding-top:20px;border-top:1px solid var(--line); }
+    .hours-compact { margin-top:16px;display:flex;flex-direction:column;gap:6px; }
+    .hours-compact-row { display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-mute); }
+    .hours-compact-row span:last-child { color:var(--gray); }
+    @media (max-width:900px) {
+      .menu-layout { grid-template-columns:1fr; }
+      .menu-sidebar { position:static; }
+      .sidebar-links { flex-direction:row;flex-wrap:wrap; }
+      .sidebar-link { padding:8px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="page-line"></div>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="mark">Paradise</span><span class="dot-mark"></span><span class="alley">Alley</span>
+      </a>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bowling.html">Bowling</a></li>
+          <li><a href="menu.html" class="current">Menu</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="leagues.html">Leagues</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
+      <a href="mailto:paradisealley.events@gmail.com?subject=Party%20Booking%20Inquiry" class="nav-cta">Book a Party</a>
+      <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay">
+    <a href="index.html">Home</a>
+    <a href="bowling.html">Bowling</a>
+    <a href="menu.html">Menu</a>
+    <a href="events.html">Events</a>
+    <a href="leagues.html">Leagues</a>
+    <a href="visit.html">Visit</a>
+    <a href="mailto:paradisealley.events@gmail.com?subject=Party%20Booking%20Inquiry" class="nav-cta">Book a Party</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Full Kitchen &amp; Bar</span>
+      <h1 class="display">Eat. Drink.<br><em>Bowl.</em></h1>
+      <p class="lead">Scratch kitchen, full bar, and cold drafts — brought straight to your lane.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="tab-food">Food</button>
+        <button class="menu-tab" data-tab="tab-bar">Bar &amp; Drinks</button>
+        <button class="menu-tab" data-tab="tab-kids">Kids Menu</button>
+      </div>
+      <div class="menu-layout">
+        <aside class="menu-sidebar">
+          <p class="sidebar-label">Jump to</p>
+          <div class="sidebar-links">
+            <button class="sidebar-link active" onclick="jumpTo('starters',this)">Starters</button>
+            <button class="sidebar-link" onclick="jumpTo('burgers',this)">Burgers &amp; Mains</button>
+            <button class="sidebar-link" onclick="jumpTo('pizza',this)">Pizza</button>
+            <button class="sidebar-link" onclick="jumpTo('sides',this)">Sides</button>
+            <button class="sidebar-link" onclick="jumpTo('desserts',this)">Desserts</button>
+          </div>
+          <div class="menu-note">
+            <strong style="color:var(--white)">Kitchen Hours</strong>
+            <div class="hours-compact">
+              <div class="hours-compact-row"><span>Tue–Thu</span><span>11am – 9:30pm</span></div>
+              <div class="hours-compact-row"><span>Fri–Sat</span><span>11am – 11:30pm</span></div>
+              <div class="hours-compact-row"><span>Sunday</span><span>Noon – 7:30pm</span></div>
+              <div class="hours-compact-row"><span>Monday</span><span>Closed</span></div>
+            </div>
+            <p style="margin-top:12px">Menu and prices subject to change. Ask about allergens.</p>
+          </div>
+        </aside>
+
+        <div>
+          <!-- FOOD -->
+          <div class="menu-panel active" id="tab-food">
+            <div class="menu-category" id="starters">
+              <div class="menu-cat-title">Starters</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Loaded Nachos</div><div class="menu-item-desc">Tortilla chips, queso, jalapeños, pico de gallo, sour cream</div></div><div class="menu-item-price">$12</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Chicken Wings</div><div class="menu-item-desc">Buffalo, BBQ, or Garlic Parmesan · ranch or blue cheese</div></div><div class="menu-item-price">$14</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Mozzarella Sticks</div><div class="menu-item-desc">Fried golden, served with marinara</div></div><div class="menu-item-price">$9</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Spinach &amp; Artichoke Dip</div><div class="menu-item-desc">Warm, creamy dip with toasted pita and tortilla chips</div></div><div class="menu-item-price">$11</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Soft Pretzels</div><div class="menu-item-desc">Three large soft pretzels with beer cheese dipping sauce</div></div><div class="menu-item-price">$10</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Fried Pickles</div><div class="menu-item-desc">Crispy dill pickle slices, served with ranch</div></div><div class="menu-item-price">$8</div></div>
+              </div>
+            </div>
+            <div class="menu-category" id="burgers">
+              <div class="menu-cat-title">Burgers &amp; Mains</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">The Paradise Burger</div><div class="menu-item-desc">8oz smash patty, American cheese, lettuce, tomato, onion, secret sauce · with fries</div></div><div class="menu-item-price">$15</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">BBQ Bacon Burger</div><div class="menu-item-desc">Smash patty, cheddar, crispy bacon, BBQ sauce, onion strings · with fries</div></div><div class="menu-item-price">$16</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Crispy Chicken Sandwich</div><div class="menu-item-desc">Buttermilk fried chicken, pickles, slaw, hot honey mayo · with fries</div></div><div class="menu-item-price">$14</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Po'Boy</div><div class="menu-item-desc">Shrimp or roast beef on French bread with lettuce, tomato, remoulade</div></div><div class="menu-item-price">$15</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Grilled Chicken Plate</div><div class="menu-item-desc">Marinated grilled chicken, seasonal vegetables, choice of two sides</div></div><div class="menu-item-price">$16</div></div>
+              </div>
+            </div>
+            <div class="menu-category" id="pizza">
+              <div class="menu-cat-title">Pizza</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Cheese</div><div class="menu-item-desc">House red sauce, mozzarella · 10" or 14"</div></div><div class="menu-item-price">$12 / $18</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Pepperoni</div><div class="menu-item-desc">Red sauce, mozzarella, cup &amp; char pepperoni · 10" or 14"</div></div><div class="menu-item-price">$14 / $20</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Meat Lovers</div><div class="menu-item-desc">Pepperoni, sausage, bacon, ham · 10" or 14"</div></div><div class="menu-item-price">$16 / $22</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">BBQ Chicken</div><div class="menu-item-desc">BBQ base, grilled chicken, red onion, cilantro · 10" or 14"</div></div><div class="menu-item-price">$16 / $22</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Build Your Own</div><div class="menu-item-desc">Cheese base + up to 3 toppings · 10" or 14"</div></div><div class="menu-item-price">$14 / $20</div></div>
+              </div>
+            </div>
+            <div class="menu-category" id="sides">
+              <div class="menu-cat-title">Sides</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">French Fries</div></div><div class="menu-item-price">$5</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Loaded Fries</div><div class="menu-item-desc">Queso, jalapeños, bacon</div></div><div class="menu-item-price">$8</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Onion Rings</div></div><div class="menu-item-price">$6</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Side Salad</div><div class="menu-item-desc">Mixed greens, tomato, cucumber, choice of dressing</div></div><div class="menu-item-price">$6</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Coleslaw</div></div><div class="menu-item-price">$4</div></div>
+              </div>
+            </div>
+            <div class="menu-category" id="desserts">
+              <div class="menu-cat-title">Desserts</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Warm Brownie Sundae</div><div class="menu-item-desc">Warm brownie, vanilla ice cream, hot fudge, whipped cream</div></div><div class="menu-item-price">$8</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Funnel Cake Fries</div><div class="menu-item-desc">Crispy strips, powdered sugar, strawberry dipping sauce</div></div><div class="menu-item-price">$7</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Ice Cream Scoop</div><div class="menu-item-desc">Two scoops · chocolate, vanilla, or strawberry</div></div><div class="menu-item-price">$5</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAR -->
+          <div class="menu-panel" id="tab-bar">
+            <div class="menu-category">
+              <div class="menu-cat-title">Draft Beer</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Bud Light</div><div class="menu-item-desc">16oz Pint</div></div><div class="menu-item-price">$5</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Coors Light</div><div class="menu-item-desc">16oz Pint</div></div><div class="menu-item-price">$5</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Abita Amber</div><div class="menu-item-desc">16oz Pint · Local Louisiana brew</div></div><div class="menu-item-price">$6</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Abita Purple Haze</div><div class="menu-item-desc">16oz Pint · Raspberry lager</div></div><div class="menu-item-price">$6</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Seasonal Draft</div><div class="menu-item-desc">Ask your bartender for today's selection</div></div><div class="menu-item-price">$6</div></div>
+              </div>
+            </div>
+            <div class="menu-category">
+              <div class="menu-cat-title">Bottles &amp; Cans</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Domestic Bottles</div><div class="menu-item-desc">Bud, Bud Light, Miller Lite, Coors, Michelob Ultra</div></div><div class="menu-item-price">$4</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Import Bottles</div><div class="menu-item-desc">Corona, Heineken, Modelo, Dos Equis</div></div><div class="menu-item-price">$5</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Hard Seltzer</div><div class="menu-item-desc">White Claw, Truly · assorted flavors</div></div><div class="menu-item-price">$5</div></div>
+              </div>
+            </div>
+            <div class="menu-category">
+              <div class="menu-cat-title">Cocktails</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Paradise Punch</div><div class="menu-item-desc">Rum, pineapple, coconut, lime — our house specialty</div></div><div class="menu-item-price">$10</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Frozen Daiquiri</div><div class="menu-item-desc">Strawberry, mango, or hurricane</div></div><div class="menu-item-price">$9</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Margarita</div><div class="menu-item-desc">Classic or frozen, salt or no salt</div></div><div class="menu-item-price">$9</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Long Island Iced Tea</div><div class="menu-item-desc">Vodka, rum, gin, tequila, triple sec, sour, cola</div></div><div class="menu-item-price">$11</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Whiskey Sour</div><div class="menu-item-desc">Bourbon, lemon juice, simple syrup, egg white</div></div><div class="menu-item-price">$10</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Vodka Soda</div><div class="menu-item-desc">House vodka, soda water, choice of citrus</div></div><div class="menu-item-price">$8</div></div>
+              </div>
+            </div>
+            <div class="menu-category">
+              <div class="menu-cat-title">Wine &amp; Shots</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">House Wine</div><div class="menu-item-desc">Red, white, or rosé by the glass</div></div><div class="menu-item-price">$8</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Well Shots</div><div class="menu-item-desc">Vodka, rum, tequila, whiskey, gin</div></div><div class="menu-item-price">$5</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Premium Shots</div><div class="menu-item-desc">Patron, Jack Daniel's, Jameson, Crown Royal</div></div><div class="menu-item-price">$8</div></div>
+              </div>
+            </div>
+            <div class="menu-category">
+              <div class="menu-cat-title">Non-Alcoholic</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Fountain Drinks</div><div class="menu-item-desc">Coke, Diet Coke, Sprite, Lemonade · free refills</div></div><div class="menu-item-price">$3</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Red Bull</div></div><div class="menu-item-price">$4</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Water</div></div><div class="menu-item-price">$2</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KIDS -->
+          <div class="menu-panel" id="tab-kids">
+            <div class="info-box" style="margin-bottom:32px">
+              <strong>Kids Menu</strong> — For guests 12 and under. All meals include a side and a drink.
+            </div>
+            <div class="menu-category">
+              <div class="menu-cat-title">Kids Meals</div>
+              <div class="menu-items">
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Mini Corn Dogs</div><div class="menu-item-desc">6 mini corn dogs with ketchup or mustard + side + drink</div></div><div class="menu-item-price">$8</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Grilled Cheese</div><div class="menu-item-desc">Classic on white bread + side + drink</div></div><div class="menu-item-price">$7</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Kids Burger</div><div class="menu-item-desc">3oz patty, American cheese, ketchup + side + drink</div></div><div class="menu-item-price">$8</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Mac &amp; Cheese</div><div class="menu-item-desc">Creamy macaroni + side + drink</div></div><div class="menu-item-price">$7</div></div>
+                <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Cheese Pizza Slice</div><div class="menu-item-desc">Two slices + side + drink</div></div><div class="menu-item-price">$8</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="mark">Paradise</span><span class="dot-mark"></span><span class="alley">Alley</span></a>
+          <p>Mandeville's premier bowling and entertainment destination. 32 lanes, full bar, scratch kitchen, live music. First come, first served.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/p/Paradise-Alley-61564994095362/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.87v-6.98H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.98A10 10 0 0022 12z"/></svg></a>
+            <a href="https://www.instagram.com/paradisealleymandeville/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h5>Explore</h5><ul><li><a href="bowling.html">Bowling</a></li><li><a href="menu.html">Menu</a></li><li><a href="events.html">Events</a></li><li><a href="leagues.html">Leagues</a></li><li><a href="visit.html">Visit</a></li></ul></div>
+        <div class="footer-col"><h5>Visit</h5><ul><li>4400 LA-22</li><li>Mandeville, LA 70471</li><li><a href="tel:+19852722139">(985) 272-2139</a></li></ul></div>
+        <div class="footer-col"><h5>Hours</h5><ul style="color:var(--ink-mute);font-size:13px"><li>Mon · Closed</li><li>Tue–Thu · 11a – 10p</li><li>Fri–Sat · 11a – 12a</li><li>Sun · 12p – 8p</li></ul></div>
+      </div>
+      <div class="copy"><div>© <span id="yr">2026</span> Paradise Alley. All rights reserved.</div><div>Mandeville, LA · Rebuilt in 2024</div></div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    function jumpTo(id, btn) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelectorAll('.sidebar-link').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
